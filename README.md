@@ -10,7 +10,7 @@ build.bat             # Windows build skript
 build.sh              # Linux/macOS build skript
 CMakeLists.txt        # root CMake
 
-**Požadavky**
+## **Požadavky**
 
 CMake ≥ 3.20
 
@@ -20,7 +20,8 @@ Windows: Visual Studio 2022 / Build Tools (MSVC x64)
 
 Linux: GCC/Clang + make/ninja (balík build-essential)
 
-**Spuštění (doporučené: skripty):**
+## **Spuštění (doporučené: skripty):**
+
 _Windows_
 
 Otevři kořen repa a dvakrát klikni na build.bat
@@ -51,7 +52,7 @@ Spusť programy:
 
 Skripty dělají: konfiguraci CMake, překlad, zkopírování DLL (Windows) a zkopírování assets do build/bin/assets.
 
-**Alternativa: ručně přes CMake**
+## **Alternativa: ručně přes CMake**
 _Windows (MSVC)_
 cmake -S . -B build
 cmake --build build --config Release
@@ -64,13 +65,13 @@ cmake --build build
 ./build/bin/APP1
 ./build/bin/APP2
 
-**Co aplikace dělají:**
+## **Co aplikace dělají:**
 
 APP1 – vytvoří bílé okno („SFML Cvičné okno“).
 
 APP2 – zobrazuje HUD s dt a FPS a červený obdélník se pohybuje doprava; po opuštění pravého okraje se teleportuje mimo levý okraj.
 
-**Užitečné:**
+## **Užitečné:**
 
 Build jen konkrétní appky:
 
@@ -78,13 +79,13 @@ Windows: cmake --build build --config Release --target APP2
 
 Linux: cmake --build build --target APP2
 
-**Čistý rebuild:**
+## **Čistý rebuild:**
 
 Linux/macOS: rm -rf build
 
 Windows (CMD): rmdir /S /Q build
 
-**Troubleshooting:**
+## **Troubleshooting:**
 
 „Failed to load font“ – app hledá font v assets/fonts/.... Skripty kopírují assets do build/bin/assets. Spouštěj z build/bin (nebo měj assets po ruce).
 
@@ -92,7 +93,7 @@ Chybí sfml-*.dll (Windows) – spusť build skriptem znovu; kopírování DLL p
 
 CMake nenašel SFML – ověř, že SFML-3.0.0/ je v kořeni repa a obsahuje lib/cmake/SFML/SFMLConfig.cmake.
 
-**Poznámky k přenositelnosti:**
+## **Poznámky k přenositelnosti:**
 
 CMake je nastavený tak, aby bral SFML z ./SFML-3.0.0 (stejně na Windows i Linuxu).
 
