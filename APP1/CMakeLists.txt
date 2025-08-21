@@ -1,4 +1,5 @@
 add_executable(APP1 okno.cpp)
+
 target_link_libraries(APP1 PRIVATE SFML::Graphics SFML::Window SFML::System)
 
 if(WIN32)
