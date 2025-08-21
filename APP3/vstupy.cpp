@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "Input a Event");
+    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "APP3 Input a Event");
     window.setFramerateLimit(60);
 
     // Čtverec (100x100), start uprostřed

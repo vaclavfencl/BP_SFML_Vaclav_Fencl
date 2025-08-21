@@ -2,7 +2,7 @@
 #include <array>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "APP6 – Text & Fonty");
+    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "APP6 Text & Fonty");
     window.setFramerateLimit(60);
 
     std::array<sf::Font, 3> fonts;
@@ -48,6 +48,15 @@ int main() {
                         break;
                     case Key::E:
                         text.setString(U"Hello world");
+                        break;
+                    case Key::Add:      // numpad +
+                    case Key::Equal:    // main keyboard +
+                        text.setCharacterSize(text.getCharacterSize() + 2);
+                        break;
+                    case Key::Subtract: // numpad -
+                    case Key::Hyphen:   // main keyboard -
+                        if (text.getCharacterSize() > 2) // ochrana proti 0
+                            text.setCharacterSize(text.getCharacterSize() - 2);
                         break;
                     default:
                         break;

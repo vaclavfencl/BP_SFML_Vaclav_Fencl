@@ -3,7 +3,7 @@
 #include <sstream>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "SFML - Ukazka smycky");
+    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "APP2 Ukazka smycky");
     window.setFramerateLimit(60);
 
     sf::Clock clock;

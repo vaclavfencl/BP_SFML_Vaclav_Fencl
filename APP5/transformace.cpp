@@ -2,7 +2,7 @@
 #include <algorithm>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({960u, 600u}), "APP5 - transformace");
+    sf::RenderWindow window(sf::VideoMode({960u, 600u}), "APP5 transformace");
     window.setFramerateLimit(120);
 
     sf::RectangleShape rect({200.f, 120.f});

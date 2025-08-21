@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "SFML - Treninkove okno");
+    sf::RenderWindow window(sf::VideoMode({800u, 600u}), "APP1 Treninkove okno");
     window.setFramerateLimit(60);
 
     while (window.isOpen()) {
